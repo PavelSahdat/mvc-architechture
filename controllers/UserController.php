@@ -1,20 +1,19 @@
 <?php
-require_once __DIR__.'/Controller.php';
-require_once __DIR__.'/../models/User.php';
+require_once __DIR__ . '/Controller.php';
+require_once __DIR__ . '/../models/School.php';
 
-class UserController extends Controller {
-    function getUser($request) {
+class UserController extends Controller
+{
+    function getUser($request)
+    {
         $id = $request['id'];
-        $name = 'Mr. Abul Kalam';
-        User::create([
-            'name' => $name,
-            'age' => 43,
-        ]);
+        $user = School::findById(+$id);
+        $userName =  $user['name'];
         $this->viewEngine
             ->setView('user')
-            ->setData( array(
+            ->setData(array(
                 'id' => $id,
-                'name' => $name,
+                'name' => $userName,
             ))
             ->render();
     }
