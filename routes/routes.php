@@ -4,7 +4,7 @@ require_once "./framework/Application.php";
 $router = Application::getInstance()->make('router');
 $router->add('/users', 'GET', array(
     'callback' => function ($request) {
-        echo "User is Pavel";
+        echo "User is Bodiuls";
     }
 ));
 
@@ -24,4 +24,8 @@ $router->add('/admin', 'GET', array(
 
 $router->add('/user/profile', 'GET', array(
     'controller' => 'UserController@getUser'
+));
+
+$router->add('/school/profile', 'GET', array(
+    'controller' => 'SchoolController@getSchool'
 ));

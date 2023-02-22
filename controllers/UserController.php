@@ -1,13 +1,13 @@
 <?php
 require_once __DIR__ . '/Controller.php';
-require_once __DIR__ . '/../models/School.php';
+require_once __DIR__ . '/../models/User.php';
 
 class UserController extends Controller
 {
     function getUser($request)
     {
         $id = $request['id'];
-        $user = School::findById(+$id);
+        $user = User::findById(+$id);
         $userName =  $user['name'];
         $this->viewEngine
             ->setView('user')
