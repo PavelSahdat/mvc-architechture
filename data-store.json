@@ -1,10 +1,10 @@
 {
-  "user": [
-    { "name": "Mr. Abul Kalam", "age": 43, "id": 1 },
-    { "name": "Mr. Pavel Shahadat", "age": 23, "id": 2 }
-  ],
-  "school": [
-    { "name": "Fouzderhat School", "age": 20, "id": 1 },
-    { "name": "B M School", "age": 53, "id": 2 }
-  ]
+    "user": [
+        { "name": "Mr. Abul Kalam", "age": 43, "id": 1 },
+        { "name": "Mr. Pavel Shahadat", "age": 23, "id": 2 }
+    ],
+    "school": [
+        { "name": "Fouzderhat School", "age": 20, "id": 1 },
+        { "name": "B M School", "age": 53, "id": 2 }
+    ]
 }
