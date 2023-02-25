@@ -6,5 +6,11 @@
     "school": [
         { "name": "Fouzderhat School", "age": 20, "id": 1 },
         { "name": "B M School", "age": 53, "id": 2 }
+    ],
+
+    "office": [
+        { "name": "Confidence Cement Limited", "age": 20, "id": 1 },
+        { "name": "Royal Cement", "age": 78, "id": 2 }
     ]
+
 }
