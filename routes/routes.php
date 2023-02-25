@@ -21,6 +21,20 @@
         }
     ));
 
+    $router-> add('/officeAdmin','GET',array(
+        'callback'=> function($request){
+            if(isset($request['role'])){
+                if($request['role']==="Manager"){
+                    echo "Hamidur Rahman";
+                }
+                if($request['role']==="Engineer"){
+                    echo "Pavel Sahdat";
+                }
+            }
+          
+        }
+    ));
+
 
     $router->add('/user/profile', 'GET', array(
         'controller' => 'UserController@getUser'
