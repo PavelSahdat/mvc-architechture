@@ -45,5 +45,5 @@
     ));
 
     $router->add('office/profile','GET',array(
-        'controller'=> "OfficeController@getOffice"
+        'controller'=> 'OfficeController@getOffice'
     ));

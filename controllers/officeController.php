@@ -4,13 +4,13 @@ require_once __DIR__ . '/../models/Office.php';
 
 class OfficeController extends Controller
 {
-    function getSchool($request)
+    function getOffice($request)
     {
         $id = $request['id'];
-        $office = School::findById(+$id);
+        $office = Office::findById(+$id);
         $officeName =  $office['name'];
         $this->viewEngine
-            ->setView('school')
+            ->setView('office')
             ->setData(array(
                 'id' => $id,
                 'name' => $officeName,
