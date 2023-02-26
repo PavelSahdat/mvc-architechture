@@ -28,7 +28,7 @@
                     echo "Hamidur Rahman";
                 }
                 if($request['role']==="Engineer"){
-                    echo "Pavel Sahdat";
+                    echo "Pavel Ahmed";
                 }
             }
           
@@ -44,6 +44,6 @@
         'controller' => 'SchoolController@getSchool'
     ));
 
-    $router->add('office/profile','GET',array(
+    $router->add('/office/profile','GET',array(
         'controller'=> 'OfficeController@getOffice'
     ));
