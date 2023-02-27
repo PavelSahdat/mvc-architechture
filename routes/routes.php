@@ -43,6 +43,7 @@
     $router->add('/school/profile', 'GET', array(
         'controller' => 'SchoolController@getSchool'
     ));
+    // ofiice Controller
 
     $router->add('/office/profile','GET',array(
         'controller'=> 'OfficeController@getOffice'
