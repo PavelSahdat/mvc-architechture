@@ -17,4 +17,13 @@ class OfficeController extends Controller
             ))
             ->render();
     }
+    function getCountOffice()
+    {
+        $office = Office::fetchAll();
+        $count = count($office);
+        echo $count;
+    }
 }
+
+$officeController = new OfficeController();
+$officeController -> getCountOffice();

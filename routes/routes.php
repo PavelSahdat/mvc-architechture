@@ -48,3 +48,9 @@
     $router->add('/office/profile','GET',array(
         'controller'=> 'OfficeController@getOffice'
     ));
+    
+    //
+    $router->add('/office/count','GET',array(
+        'controller'=> 'officeCountController@getOffice'
+    )); 
+    
