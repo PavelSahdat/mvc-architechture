@@ -9,21 +9,22 @@ class OfficeController extends Controller
         $id = $request['id'];
         $office = Office::findById(+$id);
         $officeName =  $office['name'];
+        $officeAge = $office['age'];
+        $officeGroup = $office['group'];
         $this->viewEngine
             ->setView('office')
             ->setData(array(
                 'id' => $id,
                 'name' => $officeName,
+                'age' => $officeAge,
+                'group'=> $officeGroup,
             ))
             ->render();
     }
     function getCountOffice()
     {
-        $office = Office::fetchAll();
+        $office = Office::fetchAll(); // fetchAll() function use array count
         $count = count($office);
         echo $count;
     }
 }
-
-$officeController = new OfficeController();
-$officeController -> getCountOffice();

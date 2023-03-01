@@ -9,8 +9,10 @@
     ],
 
     "office": [
-        { "name": "Confidence Cement Limited", "age": 20, "id": 1 },
-        { "name": "Royal Cement", "age": 78, "id": 2 }
+        { "name": "Confidence Cement Limited", "age": 20, "group": "Confidence", "id": 1 },
+        { "name": "Royal Cement", "age": 78, "group": "Confidence", "id": 2 },
+        { "name": "Jamuna Cement", "age": 78, "group": "Confidence", "id": 3 },
+        { "name": "Fresh Cement", "age": 59, "group": "Confidence", "id": 4 }
     ]
 
 }

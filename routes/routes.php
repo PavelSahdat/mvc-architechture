@@ -35,7 +35,6 @@
         }
     ));
 
-
     $router->add('/user/profile', 'GET', array(
         'controller' => 'UserController@getUser'
     ));
@@ -43,14 +42,14 @@
     $router->add('/school/profile', 'GET', array(
         'controller' => 'SchoolController@getSchool'
     ));
-    // ofiice Controller
+    // office Controller
 
     $router->add('/office/profile','GET',array(
         'controller'=> 'OfficeController@getOffice'
     ));
     
     //
+
     $router->add('/office/count','GET',array(
-        'controller'=> 'officeCountController@getOffice'
-    )); 
-    
+        'controller'=> 'OfficeController@getCountOffice'
+    ));
