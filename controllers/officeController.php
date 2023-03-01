@@ -9,14 +9,14 @@ class OfficeController extends Controller
         $id = $request['id'];
         $office = Office::findById(+$id);
         $officeName =  $office['name'];
-        $officeAge = $office['age'];
+        // $officeAge = $office['age'];
         $officeGroup = $office['group'];
         $this->viewEngine
             ->setView('office')
             ->setData(array(
                 'id' => $id,
                 'name' => $officeName,
-                'age' => $officeAge,
+                // 'age' => $officeAge,
                 'group'=> $officeGroup,
             ))
             ->render();
