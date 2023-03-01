@@ -17,4 +17,7 @@ class UserController extends Controller
             ))
             ->render();
     }
+    function getCountUser(){
+
+    }
 }
