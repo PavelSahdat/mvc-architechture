@@ -7,11 +7,11 @@ class DashBoardController extends Controller{
     function getCountAll()
     {
         // fetchAll() function use array count
-        $user = User :: fetchAll();
+        // $user = user::fetchAll();
+        // $school = School::fetchAll();
         $school = School::fetchAll();
-        $office = Office::fetchAll();
         
-        $count = count($user);
+        $count = count($school);
         echo "User Count is ".$count."\n";
     }
 }

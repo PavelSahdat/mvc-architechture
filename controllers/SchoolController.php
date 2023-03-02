@@ -17,4 +17,10 @@ class SchoolController extends Controller
             ))
             ->render();
     }
+    function getCountOffice()
+    {
+        $school = School::fetchAll(); // fetchAll() function use array count
+        $count = count($school);   
+        echo "school Count is ".$count."\n";
+    }
 }

@@ -53,6 +53,6 @@
         'controller'=> 'OfficeController@getCountOffice'
     ));
     
-    $router -> add('/dashboard','GET',array(
+    $router -> add('/dashboard/count','GET',array(
         'controller'=> 'DashBoardController@getCountAll'
     ));
