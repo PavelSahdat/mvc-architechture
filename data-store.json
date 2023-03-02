@@ -5,7 +5,8 @@
     ],
     "school": [
         { "name": "Fouzderhat School", "age": 20, "id": 1 },
-        { "name": "B M School", "age": 53, "id": 2 }
+        { "name": "B M School", "age": 53, "id": 2 },
+        { "name": "Kumira School", "age": 90, "id": 3 }
     ],
 
     "office": [
