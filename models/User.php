@@ -6,3 +6,4 @@ class User extends Model
 {
     public static $tableName = 'user';
 }
+      

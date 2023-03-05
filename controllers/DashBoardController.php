@@ -17,17 +17,9 @@ class DashBoardController extends Controller{
         $userCount = count($user);
         $schoolCount = count($school);
         $officeCount = count($office);
-        // $totalCount = array($userCount,$schoolCount,$officeCount);
-        
-        // foreach($totalCount as $count){
-        //     echo "Count = ".$count."\n\n";
-        // }
-        echo " Total User : ".$userCount ."<br>"."Total School: ". $schoolCount
-        ."<br>"."Total Office :". $officeCount;
+       
     }
 }
-
-
 
 
 ?>

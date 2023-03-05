@@ -1,13 +1,13 @@
 <?php
 
-class ViewEngine {
+class viewEngine {
     private $view;
     private $data;
 
     public function setView($view)
     {
         $fileName =  __DIR__."/../../views/$view.html";
-        if (!file_exists($fileName)) {
+        if (!file_exists($fileName)){
             throw new Exception("View $view not found in views folder");
         }
 
@@ -18,6 +18,7 @@ class ViewEngine {
     /**
      * @param mixed $data
      */
+    
     public function setData($data)
     {
         $this->data = $data;
