@@ -1,1 +1,1 @@
-{"user":{"1":{"name":"Mr. Abul Kalam","age":43,"id":1},"2":{"name":"Mr. Abul Kalam","age":43,"id":2}}}
+{"users":{"0":{"name":"Mr. Abul Kalam","age":43,"id":1},"1":{"name":"Mr. Pavel Shahadat","age":23,"id":2},"3":{"id":3}},"school":[{"name":"Fouzderhat School","age":20,"id":1},{"name":"B M School","age":53,"id":2}]}
