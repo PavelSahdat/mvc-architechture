@@ -16,14 +16,6 @@ class DashBoardController extends Controller{
         $school = School::fetchAll();
         $office = Office::fetchAll();
         $userCount = count($user);
-        // $ageCount = array($user,$school,$office);
-        for($i = 0; $i < $userCount ; $i++ ){
-            for($j = 0; $j <= $i;$j++){
-                if($user[$i][$j]=="id"){
-
-                }
-            }
-        }
 
         $userCount = count($user);
         $schoolCount = count($school);
