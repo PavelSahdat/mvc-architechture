@@ -48,11 +48,12 @@
         'controller'=> 'OfficeController@getOffice'
     ));
     
-    //
-    $router->add('/office/count','GET',array(
-        'controller'=> 'OfficeController@getCountOffice'
-    ));
+    // //
+    // $router->add('/office/count','GET',array(
+    //     'controller'=> 'OfficeController@getCountOffice'
+    // ));
     
     $router -> add('/dashboard/count','GET',array(
         'controller'=> 'DashBoardController@getCountAll'
     ));
+    
