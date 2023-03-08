@@ -15,18 +15,32 @@ class DashBoardController extends Controller{
         $user = user::fetchAll();
         $school = School::fetchAll();
         $office = Office::fetchAll();
-        $userCount = count($user);
+
+        $totalItems = array($user,$school,$office);
 
         $userCount = count($user);
         $schoolCount = count($school);
         $officeCount = count($office);
+        $totalAge = 0;
+        $totalCount = $userCount+$schoolCount+$officeCount;
+
+        foreach($totalItems as $itemsKey => $itemsValue){
+            foreach($itemsValue as $ageKey => $ageValue){
+                $totalAge += $ageValue["age"];
+            }
+        }
+        $sum = $totalAge / $totalCount;
+
 
         $this-> viewEngine
         -> setView('count')
         ->setData(array(
             "userCount"=> $userCount,
             "schoolCount"=>$schoolCount,
-            "officeCount"=>$officeCount
+            "officeCount"=>$officeCount,
+            "totalAge" => $totalAge,
+            "totalCount"=> $totalCount,
+            "totalAvarage"=> $sum
         ))
         ->render(); 
     }
