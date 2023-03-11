@@ -10,13 +10,19 @@ class Model implements Storage
         $className = get_called_class();
         $reflector = new ReflectionClass($className);
         $tableName = $reflector->getStaticProperties()['tableName'];
-        static::$storageEngine = StorageFactory::create($tableName);
+        static::$storageEngine = StorageFactory::create($tableName, "json");
     }
 
     public static function create($data = array())
     {
         static::initialize();
         return static::$storageEngine::create($data);
+    }
+
+    public static function update($id, $data = array())
+    {
+        static::initialize();
+        return static::$storageEngine::update($id, $data);
     }
 
     public static function  fetchAll()

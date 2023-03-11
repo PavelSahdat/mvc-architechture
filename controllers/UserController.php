@@ -16,4 +16,35 @@ class UserController extends Controller
             ))
             ->render();
     }
+
+    // Controller to show list of users
+    function getUsers()
+    {
+        $users = User::fetchAll();
+        foreach ($users as $user) {
+            echo $user['name'] . '<br>';
+        }
+    }
+
+    // Controller to show user form route
+    function showUserForm($request)
+    {
+        $this->viewEngine
+            ->setView('user/user-form')
+            ->render();
+    }
+
+    // Controller for create route
+    function createUser($request)
+    {
+        $name = $request['name'];
+        $email = $request['email'];
+        $password = $request['password'];
+        User::create([
+            'name' => $name,
+            'email' => $email,
+            'password' => $password,
+        ]);
+        $this->redirect('/users');
+    }
 }

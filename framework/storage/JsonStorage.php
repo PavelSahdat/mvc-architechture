@@ -8,31 +8,22 @@ class JsonStorage extends Store implements Storage
 
     public static function create($data = array())
     {
-        return static::save(static::$tableName, $data);
+        // Write code to save data in json file
+        $db = static::fetchDB();
+        $tableName = static::$tableName;
+        $data['id'] = static::$uniqueId++;
+        $db[$tableName][] = $data;
+        file_put_contents(static::$storagePath, json_encode($db));
+        return $data;
     }
 
-    public static function save($data = array())
+    public static function update($id, $data = array())
     {
-        if (!isset(static::$contents[static::$tableName])) {
-            static::$contents[static::$tableName] = array();
-        }
-
-        $db = static::fetchDB();
-        $all = static::fetchAll();
-        $totalItems = count($all);
-        $lastItem = end($all);
-        $currentId = $totalItems > 0 ? $lastItem['id'] + 1 : static::$uniqueId;
-
-        $db[static::$tableName][$currentId] = array();
-
-        foreach ($data as $key => $value) {
-            $db[static::$tableName][$currentId][$key] = $value;
-        }
-
-        $db[static::$tableName][$currentId]['id'] = $currentId;
-        file_put_contents(static::$storagePath, json_encode($db));
-
-        return self::fetch(static::$tableName, $currentId);
+        // Write code to update data in json file given id  
+        // $db = static::fetchDB();
+        // $tableName = static::$tableName;
+        // $data = static::fetchAll($tableName);
+        // for 
     }
 
     private static function fetchDB()

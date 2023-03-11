@@ -21,6 +21,18 @@ class MemoryStorage extends Store implements Storage
         $memoryStorage[static::$tableName][] = $data;
     }
 
+    //save method
+    public static function update($id, $data = array())
+    {
+        global $memoryStorage;
+        foreach ($memoryStorage[static::$tableName] as $key => $item) {
+            if ($item['id'] == $id) {
+                $memoryStorage[static::$tableName][$key] = $data;
+            }
+        }
+    }
+
+
     public static function fetchAll()
     {
         global $memoryStorage;
