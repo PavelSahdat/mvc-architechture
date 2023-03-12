@@ -17,14 +17,7 @@ class UserController extends Controller
             ->render();
     }
 
-    // Controller to show list of users
-    function getUsers()
-    {
-        $users = User::fetchAll();
-        foreach ($users as $user) {
-            echo $user['name'] . '<br>';
-        }
-    }
+    //-------------------------------------------------------------------------------//
 
     // Controller to show user form route
     function showUserForm($request)
@@ -47,4 +40,15 @@ class UserController extends Controller
         ]);
         $this->redirect('/users');
     }
+        // Controller to show list of users 
+        function getUsers()
+        {
+            $users = User::fetchAll();
+            foreach ($users as $user) {
+                echo $user['name']. '<br>';
+            }
+        }
+
+
+
 }
