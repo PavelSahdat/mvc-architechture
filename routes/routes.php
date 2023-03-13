@@ -41,10 +41,28 @@ $router->add('/users', 'GET', array(
 $router->add('/school/create/form','GET',array(
     'controller'=>'SchoolController@showSchoolForm',
 ));
+// To handle form submission for creating school
 $router->add('/school/create','POST',array(
     'controller'=> 'SchoolController@createSchool',
 ));
-
+// To show list of School
 $router-> add('/schools','GET',array(
     'controller'=> 'SchoolController@getSchools',
 ));
+
+
+// --------------------------------------------------------------------------------//
+// To show form the creating school
+
+$router->add('/office/create/form','GET',array(
+    'controller'=>'OfficeController@showOfficeForm'
+));
+$router->add('/office/create','POST',array(
+    'controller'=>'OfficeController@createOffice',
+));
+
+$router-> add('/office','GET',array(
+    'controller'=> 'OfficeController@getOffice',
+));
+
+

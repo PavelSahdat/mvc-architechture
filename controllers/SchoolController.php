@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__.'/Controller.php';
-require_once __DIR__.'/../models/school.php';
+require_once __DIR__.'/../models/School.php';
 
 class SchoolController extends Controller
 {
@@ -25,14 +25,13 @@ class SchoolController extends Controller
 
     }
     public function getSchools(){
-        $schools = School::fetchALl();
+        $schools = School::fetchAll();
         foreach($schools as $school){
             echo $school['name']."<br>";
         }
 
     }
 }
-
 
 
 

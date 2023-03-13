@@ -1,1 +1,25 @@
-{"users":{"0":{"id":1,"name":"John Doe","email":"johndoe@gmail.com","password":"123456"},"2":{"id":2},"3":{"name":"Pavel","email":"pavel@gmail.com","password":"123","id":1},"4":{"name":"Sakib","email":"sakib@gmail.com","password":"123","id":1},"5":{"name":"Mamun","email":"mamun@gmail.com","password":"123","id":1},"6":{"name":"Kalam","email":"kalam@gmail.com","password":"123","id":1},"7":{"name":"tanvir","email":"tanvir@gmail.com","password":"ajsdkadj","id":1},"8":{"name":"gdafd","email":"aadasd@gmailcom","password":"klfjf","id":1},"9":{"name":"af","email":"af@gmail.com","password":"ajkfja","id":1},"10":{"name":"af","email":"af@gmail.com","password":"ajkfja","id":1},"11":{"name":"af","email":"af@gmail.com","password":"ajkfja","id":1},"12":{"name":"rahul","email":"rahul@gmail.com","password":"6446","pin":null,"id":1},"13":{"name":"rahul","email":"rahul@gmail.com","password":"6446","pin":null,"id":1}},"schools":[{"name":"KM school","email":"kmschool@gmail.com","address":"foujdarhat"},{"name":"akfhkfja","email":"echo@gmail.com","address":"foujdarhat","id":1},{"name":"BMA school","email":"bmaschool@gmail.com","address":"BMA academy","id":1}]}
+{
+    "users": {
+        "0": { "id": 1, "name": "John Doe", "email": "johndoe@gmail.com", "password": "123456" },
+        "2": { "id": 2 },
+        "3": { "name": "Pavel", "email": "pavel@gmail.com", "password": "123", "id": 1 },
+        "4": { "name": "Sakib", "email": "sakib@gmail.com", "password": "123", "id": 1 },
+        "5": { "name": "Mamun", "email": "mamun@gmail.com", "password": "123", "id": 1 },
+        "6": { "name": "Kalam", "email": "kalam@gmail.com", "password": "123", "id": 1 },
+        "7": { "name": "tanvir", "email": "tanvir@gmail.com", "password": "ajsdkadj", "id": 1 },
+        "8": { "name": "gdafd", "email": "aadasd@gmailcom", "password": "klfjf", "id": 1 },
+        "9": { "name": "af", "email": "af@gmail.com", "password": "ajkfja", "id": 1 },
+        "10": { "name": "af", "email": "af@gmail.com", "password": "ajkfja", "id": 1 },
+        "11": { "name": "af", "email": "af@gmail.com", "password": "ajkfja", "id": 1 },
+        "12": { "name": "rahul", "email": "rahul@gmail.com", "password": "6446", "pin": null, "id": 1 },
+        "13": { "name": "rahul", "email": "rahul@gmail.com", "password": "6446", "pin": null, "id": 1 }
+    },
+    "schools": {
+        "0": { "name": "KM school", "email": "kmschool@gmail.com", "address": "foujdarhat" },
+        "1": { "name": "akfhkfja", "email": "echo@gmail.com", "address": "foujdarhat", "id": 1 },
+        "2": { "name": "BMA school", "email": "bmaschool@gmail.com", "address": "BMA academy", "id": 1 }
+    },
+    "office": {
+        "0": { "name": "BSRM", "address": "Pakka Rastar matha", "groupName": "Royal Group", "id": 151, "holdingNumber": 50013 }
+    }
+}
