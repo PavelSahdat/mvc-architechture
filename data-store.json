@@ -15,11 +15,12 @@
         "13": { "name": "rahul", "email": "rahul@gmail.com", "password": "6446", "pin": null, "id": 1 }
     },
     "schools": {
-        "0": { "name": "KM school", "email": "kmschool@gmail.com", "address": "foujdarhat" },
+        "0": { "id": 1, "name": "KM school", "email": "kmschool@gmail.com", "address": "foujdarhat" },
         "1": { "name": "akfhkfja", "email": "echo@gmail.com", "address": "foujdarhat", "id": 1 },
-        "2": { "name": "BMA school", "email": "bmaschool@gmail.com", "address": "BMA academy", "id": 1 }
+        "2": { "name": "BMA school", "email": "bmaschool@gmail.com", "address": "BMA academy", "id": 1 },
+        "3": { "name": "ajkah", "email": "jaskdjasda@gmail.com", "address": "ajfalfja", "id": 1 }
     },
-    "office": {
+    "offices": {
         "0": { "name": "BSRM", "address": "Pakka Rastar matha", "groupName": "Royal Group", "id": 151, "holdingNumber": 50013 }
     }
 }

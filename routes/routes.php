@@ -61,7 +61,7 @@ $router->add('/office/create','POST',array(
     'controller'=>'OfficeController@createOffice',
 ));
 
-$router-> add('/office','GET',array(
+$router-> add('/offices','GET',array(
     'controller'=> 'OfficeController@getOffice',
 ));
 

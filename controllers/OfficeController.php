@@ -3,7 +3,7 @@
 require_once __DIR__.'/Controller.php';
 require_once __DIR__.'/../models/Office.php';
 
-class SchoolController extends Controller{
+class OfficeController extends Controller{
 
     public function showOfficeForm($request){
         $this->viewEngine->
@@ -17,14 +17,14 @@ class SchoolController extends Controller{
         $id = $request["id"];
         $holdingNumber = $request["holdingNumber"];
         
-        School::create(array(
+        Office::create(array(
             "name"=> $name,
             "address"=> $address,
             "groupName"=>$groupName,
             "id"=> $id,
             "holdingNumber"=>$holdingNumber,
         ));
-        $this->redirect("/office");
+        $this->redirect("/offices");
     }
 
     public function getOffice(){
