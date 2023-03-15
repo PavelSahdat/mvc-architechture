@@ -14,21 +14,21 @@ class OfficeController extends Controller{
         $name = $request["name"];
         $address = $request["address"];
         $groupName = $request["groupName"];
-        $id = $request["id"];
-        $holdingNumber = $request["holdingNumber"];
+        $idNo = $request['idNo'];
+        $holdingNumber = $request['holdingNumber'];
         
         Office::create(array(
             "name"=> $name,
             "address"=> $address,
             "groupName"=>$groupName,
-            "id"=> $id,
-            "holdingNumber"=>$holdingNumber,
+            'idNo'=> $idNo,
+            'holdingNumber'=>$holdingNumber,
         ));
         $this->redirect("/offices");
     }
 
     public function getOffice(){
-        
+    
         $offices = Office::fetchAll();
         foreach($offices as $office){
             echo $office['name']."<br>";
@@ -39,7 +39,6 @@ class OfficeController extends Controller{
 
 
 }
-
 
 
 
