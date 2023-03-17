@@ -21,7 +21,7 @@ class OfficeController extends Controller{
             "name"=> $name,
             "address"=> $address,
             "groupName"=>$groupName,
-            'idNo'=> $idNo,
+            "idNo"=> $idNo,
             'holdingNumber'=>$holdingNumber,
         ));
         $this->redirect("/offices");
@@ -30,8 +30,16 @@ class OfficeController extends Controller{
     public function getOffice(){
     
         $offices = Office::fetchAll();
-        foreach($offices as $office){
-            echo $office['name']."<br>";
+        foreach($offices as $office){      
+            $this-> viewEngine
+            ->setView('user/user')-> setData(array(
+                'name'=> $office['name'],
+                'address'=> $office['address'],
+                'groupName'=> $office['groupName'],
+                'idNo'=> $office['idNo'],
+                'holdingNumber'=> $office['holdingNumber']
+                )
+            )->render();
         }
 
     }
