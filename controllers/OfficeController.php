@@ -32,7 +32,7 @@ class OfficeController extends Controller{
         $offices = Office::fetchAll();
         foreach($offices as $office){      
             $this-> viewEngine
-            ->setView('user/user')-> setData(array(
+            ->setView('office/office')-> setData(array(
                 'name'=> $office['name'],
                 'address'=> $office['address'],
                 'groupName'=> $office['groupName'],
