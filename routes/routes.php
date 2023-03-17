@@ -22,8 +22,8 @@ $router->add('/user/profile', 'GET', array(
 
 
 // To show form for creating user
-$router-> add('/user/create/form','GET',array(
-    'controller'=>'UserController@showUserForm',
+$router->add('/user/create/form', 'GET', array(
+    'controller' => 'UserController@showUserForm',
 ));
 
 // To handle form submission for creating user
@@ -38,31 +38,34 @@ $router->add('/users', 'GET', array(
 
 // ----------------------------------------------------------------------------------//
 // To show form for creating School
-$router->add('/school/create/form','GET',array(
-    'controller'=>'SchoolController@showSchoolForm',
+$router->add('/school/create/form', 'GET', array(
+    'controller' => 'SchoolController@showSchoolForm',
 ));
 // To handle form submission for creating school
-$router->add('/school/create','POST',array(
-    'controller'=> 'SchoolController@createSchool',
+$router->add('/school/create', 'POST', array(
+    'controller' => 'SchoolController@createSchool',
 ));
 // To show list of School
-$router-> add('/schools','GET',array(
-    'controller'=> 'SchoolController@getSchools',
+$router->add('/schools', 'GET', array(
+    'controller' => 'SchoolController@getSchools',
 ));
 
 
 // --------------------------------------------------------------------------------//
 // To show form the creating school
 
-$router->add('/office/create/form','GET',array(
-    'controller'=>'OfficeController@showOfficeForm'
+$router->add('/office/create/form', 'GET', array(
+    'controller' => 'OfficeController@showOfficeForm'
 ));
-$router->add('/office/create','POST',array(
-    'controller'=>'OfficeController@createOffice',
-));
-
-$router-> add('/offices','GET',array(
-    'controller'=> 'OfficeController@getOffice',
+$router->add('/office/create', 'POST', array(
+    'controller' => 'OfficeController@createOffice',
 ));
 
+$router->add('/offices', 'GET', array(
+    'controller' => 'OfficeController@getOffice',
+));
+
+$router->add('/office', 'GET', array(
+    'controller' => 'OfficeController@getSingleOffice',
+));
 

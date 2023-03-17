@@ -1,14 +1,21 @@
 <?php
 
-class ViewEngine {
+class ViewEngine
+{
     private $view;
     private $data;
 
     public function setView($view)
     {
-        $fileName =  __DIR__."/../../views/$view.html";
+        $fileName =  __DIR__ . "/../../views/$view.php";
+        $htmlFileName = __DIR__ . "/../../views/$view.html";
         if (!file_exists($fileName)) {
-            throw new Exception("View $view not found in views folder");
+            if (!file_exists($htmlFileName)) {
+                throw new Exception("View file not found");
+            } else {
+                $this->view = $htmlFileName;
+                return $this;
+            }
         }
 
         $this->view = $fileName;
@@ -24,16 +31,12 @@ class ViewEngine {
         return $this;
     }
 
-    public function render() {
-        $contents = file_get_contents($this->view);
-        preg_match_all('#\{(.*?)\}#', $contents, $matches);
-        $matches = $matches[1];
-        $newContents = $contents;
-        foreach ($matches as $match) {
-            if (isset($this->data[$match])) {
-                $newContents = preg_replace("/{".$match."}/", $this->data[$match], $newContents);
-            }
-        }
-        echo html_entity_decode($newContents);
+    public function render()
+    {
+        ob_start();
+        extract($this->data);
+        require_once $this->view;
+        $str = ob_get_contents();
+        return $str;
     }
 }
